@@ -1,0 +1,20 @@
+name: Wolox
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/setup-node@v1.4.3
+
+    - name: NPM installation
+      run: npm i -f
+
+    - name: Build
+      run: npm build
