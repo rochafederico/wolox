@@ -6,5 +6,12 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/wolox/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/wolox/tsconfig.spec.json"
+    }
+]
 }
