@@ -12,12 +12,18 @@
       },
       "root": "projects/wolox",
       "sourceRoot": "projects/wolox/src",
-      "prefix": "app",
+      "prefix": "wlx",
+      "i18n": {
+        "sourceLocale": "es-AR",
+        "locales": {
+          "fr": "src/locale/es-AR.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/wolox",
+            "outputPath": "dist/wolox-web",
             "index": "projects/wolox/src/index.html",
             "main": "projects/wolox/src/main.ts",
             "polyfills": "projects/wolox/src/polyfills.ts",
@@ -28,7 +34,7 @@
               "projects/wolox/src/assets"
             ],
             "styles": [
-              "projects/wolox/src/styles.scss"
+              "projects/wolox/src/styles/styles.scss"
             ],
             "scripts": []
           },
@@ -92,7 +98,7 @@
               "projects/wolox/src/assets"
             ],
             "styles": [
-              "projects/wolox/src/styles.scss"
+              "projects/wolox/src/styles/styles.scss"
             ],
             "scripts": []
           }

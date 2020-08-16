@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --project=wolox",
-    "build": "ng build --project=wolox",
+    "build": "ng build --project=wolox --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
