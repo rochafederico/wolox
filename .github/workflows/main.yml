@@ -18,11 +18,10 @@ jobs:
 
     - name: Build
       run: npm build
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: be29a1a67865e38e348b86f48d500e6a274c1e7c
-        publish_dir: ./dist/wolox
-        publish_branch: fr-1-deploy
-        external_repository: rochafederico/rochafederico.github.io
+      
+    - name: Deploy to Firebase
+      uses: lowply/deploy-firebase@v0.0.3
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        FIREBASE_PROJECT: wolox-web
+        TARGET_BRANCH: fr-1-deploy
