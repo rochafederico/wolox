@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins/link';
+
+:host {
+  & > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: ($space * 1.5) ($space * 2);
+  }
+}

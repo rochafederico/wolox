@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home-landing',
-  templateUrl: './home-landing.component.html',
-  styleUrls: ['./home-landing.component.scss']
+  selector: 'wlx-home-landing',
+  templateUrl: './home-landing.component.html'
 })
 export class HomeLandingComponent implements OnInit {
 

@@ -1,0 +1,9 @@
+@import 'variables';
+@import 'mixins/link';
+@import 'links';
+
+body {
+  font-family: $font;
+  padding: 0;
+  margin: 0;
+}
