@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/wolox-web/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
