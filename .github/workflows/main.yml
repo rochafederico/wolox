@@ -22,5 +22,5 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.DEPLOY_TOKEN }}
+        github_token: fec7b66ef36e667d91dc7d1041730498b001b6dd
         publish_dir: ./dist/wolox
