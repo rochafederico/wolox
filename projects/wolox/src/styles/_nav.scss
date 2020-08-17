@@ -3,7 +3,7 @@ nav {
     list-style: none;
     display: inline-flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     @media (max-width: $breakpoint-sm) {
@@ -18,6 +18,13 @@ nav {
         display: inline-block;
         padding: ($space * .5) $space;
         @include link(black, 'none');
+        font-size: 1.25rem;
+        &.border {
+          font-size: .8rem;
+          font-weight: 600;
+          padding-left: 3rem;
+          padding-right: 3rem;
+        }
         &:hover:not(.border) {
           text-decoration: underline;
         }
