@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'wlx-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  
 })
 export class HeaderComponent implements OnInit {
   showMenu = false;

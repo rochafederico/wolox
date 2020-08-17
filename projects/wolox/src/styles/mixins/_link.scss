@@ -1,6 +1,6 @@
 @mixin link($color, $decoration: false) {
   color: $color;
   @if(type-of($decoration) == string){
-    text-decoration: $decoration;
+    text-decoration: #{$decoration};
   }
 }

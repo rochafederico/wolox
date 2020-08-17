@@ -1,0 +1,6 @@
+<button (click)="openMenu = !openMenu">
+  Menú
+</button>
+<nav [ngClass]="{open: openMenu}">
+  <ng-content></ng-content>
+</nav>
