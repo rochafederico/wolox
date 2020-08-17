@@ -22,7 +22,7 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: fec7b66ef36e667d91dc7d1041730498b001b6dd
+        github_token: 60f456a797b1333a505303f8f17e3235bc9b373d
         publish_dir: ./dist/wolox
         publish_branch: fr-1-deploy
         external_repository: rochafederico/rochafederico.github.io
