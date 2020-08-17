@@ -1,0 +1,27 @@
+name: Wolox
+
+on:
+  push:
+    branches: [ fr-1-deploy ]
+  pull_request:
+    branches: [ fr-1-deploy ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/setup-node@v1.4.3
+
+    - name: NPM installation
+      run: npm i -f
+
+    - name: Build
+      run: npm build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.DEPLOY_TOKEN }}
+        publish_dir: ./dist/wolox
+        publish_branch: master
