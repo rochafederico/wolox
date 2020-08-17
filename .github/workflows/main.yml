@@ -25,3 +25,4 @@ jobs:
         github_token: fec7b66ef36e667d91dc7d1041730498b001b6dd
         publish_dir: ./dist/wolox
         publish_branch: fr-1-deploy
+        external_repository: rochafederico/rochafederico.github.io
