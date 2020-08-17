@@ -1,0 +1,66 @@
+@import '../../../styles/variables';
+
+:host > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 #{$space * 3};
+
+  svg {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    min-height: 50vh;
+  }
+  @media (min-width: $breakpoint-md) {
+    justify-content: stretch;
+    flex-direction: row;
+    h2 {
+      padding-right: #{$space * 12};
+    }
+    svg {
+      text {
+        animation-name: technology;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        transform-origin: center;
+        @for $i from 1 through 12 {
+          &:nth-child(#{$i}){
+            animation-delay: #{$i * 1.1}s;
+          }
+        }
+      }
+    }
+    & > *{
+      width: 50%;
+      box-sizing: border-box;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@keyframes technology{
+  0% {
+    opacity: 0;
+    transform: scale(.5);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(.75);
+  }
+}

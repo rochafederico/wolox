@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  color: $text;
   font-family: $font;
   padding: 0;
   margin: 0;
@@ -18,4 +19,11 @@ body {
 img.responsive {
   max-width: 100%;
   height: auto;
+}
+
+.bg-header {
+  background: url('/assets/Bg_Header.png');
+  background-position-y: top;
+  background-size: cover;
+  background-attachment: fixed;
 }
