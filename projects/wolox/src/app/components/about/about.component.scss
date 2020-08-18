@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins/flex';
+
+:host {
+  @include flex(column, false, false, row);
+  flex-wrap: wrap;
+  @media (min-width: $breakpoint-sm) {
+    min-height: 50vh;
+  }
+  > * {
+    width: 100%;
+    padding: ($space*3);
+    box-sizing: border-box;
+
+    @media (min-width: $breakpoint-sm) {
+      width: 50%;
+    }
+  }
+  & > :first-child{
+    @include flex(column, center, center);
+
+    background: url('/assets/img_woloxer.png');
+    background-position: center;
+    background-size: cover;
+    > *:not(:last-child) {
+      margin-bottom: $space;
+    }
+    > h3 {
+      font-size: 2.5rem;
+    }
+    > span {
+      color: white;
+    }
+    > .user-twitter {
+      @include flex(row, center, center);
+      color: white;
+      > img {
+        margin-right: $space;
+      }
+    }
+  }
+  & > :last-child {
+    @include flex(row, center, center);
+    text-align: center;
+    background-color: whitesmoke;
+  }
+}
