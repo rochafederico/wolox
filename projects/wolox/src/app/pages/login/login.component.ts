@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 
 @Component({
@@ -14,7 +15,14 @@ export class LoginComponent {
     remember: new FormControl(false, [])
   });
   submitted = false;
-  constructor(private loginSrv: LoginService){}
+  constructor(
+    private loginSrv: LoginService,
+    private router: Router,
+  ){
+    if (this.loginSrv.token) {
+      this.router.navigate(['/home']);
+    }
+  }
   login(): void{
     this.submitted = true;
     if (this.form.valid){
@@ -26,7 +34,9 @@ export class LoginComponent {
         )
       .subscribe((data) => {
         this.form.enable();
-        debugger
+        if (data) {
+          this.router.navigate(['/home']);
+        }
       });
     }
   }

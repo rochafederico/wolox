@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { LoginRoutingModule } from './login-routing.module';
-import { UiModule } from '../../modules/ui/ui.module';
-import { LoginComponent } from '../../pages/login/login.component';
-import { LoginService } from '../../services/login.service';
+import { HomeRoutingModule } from './home-routing.module';
+import { UiModule } from '../ui/ui.module';
+import { HomeComponent } from '../../pages/home/home.component';
 
 @NgModule({
   declarations: [
     // Pages
-    LoginComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     UiModule,
-    LoginRoutingModule
+    HomeRoutingModule
   ],
-  providers: [
-    LoginService
-  ]
+  providers: []
 })
 export class LoginModule { }
