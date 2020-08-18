@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins/flex';
+
+:host {
+  @include flex(column, center, center, row);
+  padding: #{$space * 2} #{$space * 2};
+  @media (min-width: $breakpoint-sm){
+    padding: #{$space * 2} #{$space * 6};
+  }
+  > * {
+    width: 100%;
+    @media (min-width: $breakpoint-sm){
+      width: 50%;
+    }
+  }
+  > h2 {
+    text-align: center;
+  }
+  > ol {
+    list-style: none;
+    padding-left: 0;
+    > li {
+      display: flex;
+      > img {
+        margin-right: $space;
+      }
+    }
+  }
+}
