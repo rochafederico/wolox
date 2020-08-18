@@ -6,6 +6,7 @@ import { BenefitsComponent } from '../../components/benefits/benefits.component'
 import { HeaderComponent } from '../../components/header/header.component';
 import { LogoComponent } from '../../components/logo/logo.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { RequirementsComponent } from '../../components/requirements/requirements.component';
 import { TechnologiesComponent } from '../../components/technologies/technologies.component';
 import { WellcomeComponent } from '../../components/wellcome/wellcome.component';
 import { HomeLandingComponent } from '../../pages/home-landing/home-landing.component';
@@ -19,6 +20,7 @@ import { LandingRoutingModule } from './landing-routing.module';
     HeaderComponent,
     LogoComponent,
     NavbarComponent,
+    RequirementsComponent,
     TechnologiesComponent,
     WellcomeComponent,
     // Pages
