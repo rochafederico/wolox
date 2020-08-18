@@ -1,0 +1,41 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins/flex';
+
+:host {
+  display: block;
+  padding: ($space*3) 0;
+  text-align: center;
+  > h2 {
+    margin: 0 0 ($space*3);
+  }
+  .benefits {
+    list-style: none;
+    padding: 0 $space;
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      @include flex(column, center, center);
+      width: 100%;
+      @media (min-width: $breakpoint-xs){
+        width: 50%;
+      }
+      @media (min-width: $breakpoint-sm){
+        width: 33.33%;
+      }
+      @media (min-width: $breakpoint-md){
+        width: 16.66%;
+      }
+    }
+    li {
+      padding: $space;
+      box-sizing: border-box;
+      > img {
+        width: 45%;
+        height: auto;
+      }
+      > h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+}

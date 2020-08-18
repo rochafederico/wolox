@@ -1,0 +1,7 @@
+<h2>Entre los beneficios que ofrecemos se encuentra <span class="primary">;)</span></h2>
+<ol class="benefits">
+  <li *ngFor="let item of items">
+    <img [src]="'assets/' + item.icon" [attr.alt]="item.label">
+    <h3>{{item.label}}</h3>
+  </li>
+</ol>
