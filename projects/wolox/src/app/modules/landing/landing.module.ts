@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { AboutComponent } from '../../components/about/about.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { LogoComponent } from '../../components/logo/logo.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
@@ -17,6 +18,7 @@ import { LandingRoutingModule } from './landing-routing.module';
     NavbarComponent,
     TechnologiesComponent,
     WellcomeComponent,
+    AboutComponent,
     // Pages
     HomeLandingComponent
   ],

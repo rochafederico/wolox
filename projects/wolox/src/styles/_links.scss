@@ -7,4 +7,12 @@ a{
   &.primary {
     @include link($primary);
   }
+  &.white {
+    @include link(white);
+  }
+  &.button {
+    font-size: .75rem;
+    text-decoration: none;
+    padding: .5rem 2rem;
+  }
 }
