@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'wlx-technologies',
@@ -6,5 +6,4 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./technologies.component.scss']
 })
 export class TechnologiesComponent {
-  @Input() id: string;
 }

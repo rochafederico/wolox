@@ -1,0 +1,22 @@
+@mixin flex(
+  $direction,
+  $align-items: false,
+  $justify-content: false,
+  $direction-md: false) {
+  display: flex;
+  @if(type-of($direction) == string) {
+    flex-direction: #{$direction};
+  }
+  @if(type-of($align-items) == string) {
+    align-items: #{$align-items};
+  }
+  @if(type-of($justify-content) == string) {
+    justify-content: #{$justify-content};
+  }
+
+  @if(type-of($direction-md) == string) {
+    @media (min-width: $breakpoint-md) {
+      flex-direction: #{$direction-md};
+    }
+  }
+}
