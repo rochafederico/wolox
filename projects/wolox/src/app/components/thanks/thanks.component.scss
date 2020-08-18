@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins/flex';
+
+:host {
+  @include flex(column, center, center);
+  padding: ($space*2) ($space*3);
+  p.thanks{
+    font-size: 3rem;
+    margin: 0;
+  }
+  p.information {
+    margin-top: $space;
+    margin-bottom: ($space*2);
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  wlx-logo {
+    margin: ($space*8) 0 $space;
+    width: 120px;
+    display: block;
+  }
+}
