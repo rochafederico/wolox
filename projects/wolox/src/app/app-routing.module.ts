@@ -9,6 +9,13 @@ const routes: Routes = [
       .then(m => m.LandingModule);
     }
   },
+  {
+    path: 'login',
+    loadChildren: () => {
+      return import('./modules/login/login.module')
+      .then(m => m.LoginModule);
+    }
+  },
 ];
 
 @NgModule({
