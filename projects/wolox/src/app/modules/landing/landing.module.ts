@@ -8,6 +8,7 @@ import { LogoComponent } from '../../components/logo/logo.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { RequirementsComponent } from '../../components/requirements/requirements.component';
 import { TechnologiesComponent } from '../../components/technologies/technologies.component';
+import { ThanksComponent } from '../../components/thanks/thanks.component';
 import { WellcomeComponent } from '../../components/wellcome/wellcome.component';
 import { HomeLandingComponent } from '../../pages/home-landing/home-landing.component';
 import { LandingRoutingModule } from './landing-routing.module';
@@ -22,6 +23,7 @@ import { LandingRoutingModule } from './landing-routing.module';
     NavbarComponent,
     RequirementsComponent,
     TechnologiesComponent,
+    ThanksComponent,
     WellcomeComponent,
     // Pages
     HomeLandingComponent
