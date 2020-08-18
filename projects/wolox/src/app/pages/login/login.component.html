@@ -1,0 +1,21 @@
+<wlx-logo></wlx-logo>
+<form [formGroup]="form" (ngSubmit)="login()" [ngClass]="{submitted: submitted}">
+  <wlx-field label="Correo electrónico">
+    <input type="email" formControlName="email" required>
+    <div class="error-field">
+      Ingrese un e-mail valido. Ej.: mail@mail.com
+    </div>
+  </wlx-field>
+  <wlx-field label="Contraseña">
+    <input type="password" formControlName="password" required>
+    <div class="error-field">
+      Ingrese su contraseña.
+    </div>
+  </wlx-field>
+  <label>
+    <input type="checkbox" formControlName="remember"> Recordarme
+  </label>
+  <footer>
+    <input type="submit" class="button filling big" [disabled]="form.disabled">
+  </footer>
+</form>

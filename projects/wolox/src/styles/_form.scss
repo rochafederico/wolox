@@ -1,0 +1,53 @@
+label.field{
+  margin-bottom: $space;
+
+  &,
+  > input,
+  > textarea,
+  > select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  > input,
+  > textarea,
+  > select {
+    color: $text;
+    border: 0;
+    border-bottom: 1px solid $text;
+    border-color: hsl(hue($text), saturation($text), 80%);
+    background: none;
+    padding: ($space*.5) $space;
+    transition: border-color 400ms ease-in-out;
+
+    &:hover {
+      border-color: hsl(hue($text), saturation($text), 50%);
+    }
+    &:focus {
+      border-color: hsl(hue($text), saturation($text), 15%);
+    }
+  }
+}
+
+form {
+  &.submitted{
+    input, select {
+      &:invalid {
+        border-color: red;
+        & ~ .error-field {
+            height: $space;
+        }
+      }
+    }
+  }
+  .error-field {
+    height: 0;
+    transition: height 400ms ease-in-out;
+
+    overflow: hidden;
+    color: red;
+    font-size: small;
+    margin-top: $space * .5;
+  }
+}
