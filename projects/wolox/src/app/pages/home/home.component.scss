@@ -1,0 +1,56 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins/flex';
+:host {
+  main {
+    margin-top: $space;
+  }
+  .logo {
+    text-align: center;
+  }
+  .tech-form {
+    padding: $space $space 0;
+    @include flex(row, center, center);
+    > div {
+      @include flex(row, center, center);
+      width: 300px;
+
+      @media (min-width: $breakpoint-sm){
+        width: 300px;
+      }
+      @media (min-width: $breakpoint-md){
+        width: 400px;
+      }
+    }
+  }
+
+  .tech-result {
+    display: grid;
+    grid-template-columns: auto;
+    padding: ($space*2);
+    grid-gap: $space;
+    @media (min-width: $breakpoint-sm){
+      grid-template-columns: auto auto;
+    }
+    @media (min-width: $breakpoint-md){
+      grid-template-columns: auto auto auto;
+    }
+
+    .tech-result-item {
+      @include flex(row, center);
+      .img {
+        width: 150px;
+        height: 150px;
+        box-sizing: border-box;
+        padding: $space;
+        @include flex(row, center, center);
+        > img {
+          max-width: 100%;
+        }
+      }
+      ol {
+        list-style: none;
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+$border-loading: $space * .25;
+
+.loader {
+    border: $border-loading solid $primary;
+    border-top: $border-loading solid #eee;
+    border-radius: 50%;
+    width: $space;
+    height: $space;
+    animation: loader-rotate 1s linear infinite;
+    margin: $space auto;
+}
+
+@keyframes loader-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

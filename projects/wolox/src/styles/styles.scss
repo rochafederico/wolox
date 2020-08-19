@@ -4,6 +4,7 @@
 @import 'colors';
 @import 'form';
 @import 'links';
+@import 'loader';
 @import 'nav';
 @import 'text';
 
@@ -35,4 +36,18 @@ img.responsive {
   background-position-y: bottom;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.bg-all {
+  background: url('/assets/Bg_Header.png'), url('/assets/Bg_Footer.png');
+  background-position-y: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: $space;
+  background-color: hsl(hue($primary), saturation($secondary), 98%);
+  box-shadow: 0 3px 10px  hsla(hue($primary), saturation($secondary), 10%, .25);
 }

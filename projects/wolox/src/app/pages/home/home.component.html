@@ -1,0 +1,31 @@
+<main class="bg-all">
+  <div class="logo">
+    <wlx-logo></wlx-logo>
+  </div>
+  <form class="tech-form" (submit)="filterTechs()">
+    <div class="card">
+      <label class="field">
+        Buscar
+        <input type="text"  name="search" [(ngModel)]="search" (ngModelChange)="filterTechs()">
+      </label>
+    </div>
+  </form>
+  <div class="loader" *ngIf="loading"></div>
+  <div class="tech-result" *ngIf="!loading">
+    <div class="tech-result-item card" *ngFor="let item of filteredTechs">
+      <div class="img">
+        <img [src]="item.logo">
+      </div>
+      <div>
+        <h3><b>{{item.tech}}</b></h3>
+        <ol>
+          <li><b>Autor:</b> {{item.author}}</li>
+          <li><b>Año:</b> {{item.year}}</li>
+          <li><b>Lenguaje:</b> {{item.language}}</li>
+          <li><b>Tipo:</b> {{item.type}}</li>
+          <li><b>Licencia:</b> {{item.license}}</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</main>
